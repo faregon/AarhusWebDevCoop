@@ -22,7 +22,7 @@
 
                 @RenderNavForNode(root, 1);
 
-                foreach (var page in root.Children)
+                foreach (var page in root.Children.Where("Visible"))
                 {
                 @RenderNavForNode(page, maxLevelForNav);
                 }

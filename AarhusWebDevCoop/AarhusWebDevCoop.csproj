@@ -488,6 +488,7 @@
     <Content Include="Views\MacroPartials\SiteMap.cshtml" />
     <Content Include="Views\Partials\main_menu.cshtml" />
     <Content Include="Views\login.cshtml" />
+    <Content Include="Views\forbiddenAccessPAge.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
