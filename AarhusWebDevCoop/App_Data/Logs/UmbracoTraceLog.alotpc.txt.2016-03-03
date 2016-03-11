@@ -1,0 +1,344 @@
+﻿ 2016-03-03 15:08:19,304 [P11560/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.4.0 application starting on ALOTPC
+ 2016-03-03 15:08:19,475 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-03-03 15:08:19,505 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 30ms)
+ 2016-03-03 15:08:19,725 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-03-03 15:08:20,875 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 1150ms)
+ 2016-03-03 15:08:21,106 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-03-03 15:08:21,114 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 7ms)
+ 2016-03-03 15:08:21,114 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-03-03 15:08:21,123 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 8ms)
+ 2016-03-03 15:08:21,137 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-03-03 15:08:21,209 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 72ms)
+ 2016-03-03 15:08:21,210 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-03-03 15:08:21,219 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 8ms)
+ 2016-03-03 15:08:21,372 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-03-03 15:08:21,380 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 7ms)
+ 2016-03-03 15:08:21,380 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-03-03 15:08:21,385 [P11560/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 4ms)
+ 2016-03-03 15:08:23,511 [P11560/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-03-03 15:08:24,716 [P11560/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-03-03 15:08:24,718 [P11560/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-03-03 15:08:24,852 [P11560/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2016-03-03 15:08:24,865 [P11560/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2016-03-03 15:08:25,116 [P11560/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2016-03-03 15:08:25,228 [P11560/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 6118ms)
+ 2016-03-03 15:08:31,475 [P11560/D2/T5] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:50345/umbraco (UmbracoModule request)
+ 2016-03-03 15:08:35,510 [P11560/D2/T5] INFO  umbraco.content - Load Xml from file...
+ 2016-03-03 15:08:35,985 [P11560/D2/T5] INFO  umbraco.content - Loaded Xml from file.
+ 2016-03-03 15:08:41,294 [P11560/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2016-03-03 15:08:41,310 [P11560/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 16ms)
+ 2016-03-03 15:08:45,457 [P11560/D2/T5] ERROR Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Failed to build models.
+System.InvalidOperationException: The model class for content type with alias "message" is named "Message". CSharp does not support using the same name for the property with alias "message". Consider using an attribute to assign a different name to the property.
+   at Umbraco.ModelsBuilder.Building.Builder.Prepare() in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Building\Builder.cs:line 171
+   at Umbraco.ModelsBuilder.Building.Builder..ctor(IList`1 typeModels, ParseResult parseResult) in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Building\Builder.cs:line 84
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GenerateModelsCode(IDictionary`2 ourFiles, IList`1 typeModels) in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 280
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GetModelsAssembly(Boolean forceRebuild) in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 222
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.EnsureModels() in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 144
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:45,627 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:48,048 [P11560/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2016-03-03 15:08:48,063 [P11560/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 14ms)
+ 2016-03-03 15:08:48,342 [P11560/D2/T5] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.cms.businesslogic.macro.IMacroEngine
+ 2016-03-03 15:08:48,351 [P11560/D2/T5] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.cms.businesslogic.macro.IMacroEngine, found 0 (took 8ms)
+ 2016-03-03 15:08:49,911 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,911 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,912 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,946 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,947 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:49,948 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,014 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,014 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,014 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,014 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,037 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,037 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,037 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,037 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,044 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,044 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,044 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,044 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,044 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,044 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,215 [P11560/D2/T11] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username kunobelin@yahoo.com from IP address ::1
+ 2016-03-03 15:08:50,218 [P11560/D2/T11] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: kunobelin@yahoo.com logged in from IP address ::1
+ 2016-03-03 15:08:50,224 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,224 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,224 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,224 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,224 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,224 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:50,934 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2016-03-03 15:08:50,948 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 14ms)
+ 2016-03-03 15:08:52,078 [P11560/D2/T8] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2016-03-03 15:08:52,091 [P11560/D2/T8] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 13ms)
+ 2016-03-03 15:08:52,230 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-03-03 15:08:52,250 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 20ms)
+ 2016-03-03 15:08:52,272 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2016-03-03 15:08:52,273 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2016-03-03 15:08:52,278 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-03-03 15:08:52,295 [P11560/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 16ms)
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,204 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,208 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,208 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,209 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,299 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,300 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,303 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,303 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,303 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,303 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,304 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,304 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,314 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,314 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,314 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,314 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,314 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,314 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,316 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,317 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,340 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,340 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,340 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,340 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,340 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,340 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,345 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,345 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,346 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,346 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,346 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,346 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,350 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,350 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,350 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,350 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,351 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,352 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,353 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,353 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,353 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,354 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,356 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,356 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,356 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,356 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,382 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,382 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,391 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,391 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,391 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,391 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,398 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,398 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,398 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,398 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,400 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,400 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,412 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,412 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,412 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,412 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,416 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,416 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,416 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,416 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,421 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,421 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,421 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,421 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,422 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,422 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,422 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,422 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,425 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,425 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,425 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:08:53,425 [P11560/D2/T5] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-03 15:09:42,557 [P11560/D2/T10] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-02 15:09:42
+ 2016-03-03 16:54:36,891 [P11560/D2/T113] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.

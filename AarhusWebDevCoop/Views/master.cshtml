@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+<html>
+	<head>
+	<meta name="description" content='@Umbraco.Field("metaDescription")'>
+	<meta name="keywords" content='@Umbraco.Field("metaKeywords")'>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        
+        <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+       
+	<title> Title</title>
+	</head>
+	<body>
+        
+            @Html.Partial("main_menu")
+	<div class="container">
+        <ol class="breadcrumb">
+            @foreach (var ancestor in Model.Content.Ancestors().Where(t => t.IsVisible()))
+            {
+            <li><a href="@ancestor.Url">@ancestor.Name</a></li>
+            }
+            <li class="active">@Model.Content.Name</li>
+        </ol>
+	@Umbraco.Field("header")
+	@RenderBody()
+	@Umbraco.Field("footer")
+				</div>
+        <script src="~/Scripts/jquery-1.9.1.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+	</body>
+	</html>

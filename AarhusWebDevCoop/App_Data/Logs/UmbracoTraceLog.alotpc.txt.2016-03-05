@@ -1,0 +1,1001 @@
+﻿ 2016-03-05 14:21:57,853 [P9760/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.4.0 application starting on ALOTPC
+ 2016-03-05 14:21:57,962 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-03-05 14:21:58,007 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 45ms)
+ 2016-03-05 14:21:58,110 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-03-05 14:21:58,697 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 586ms)
+ 2016-03-05 14:21:58,756 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-03-05 14:21:58,770 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 13ms)
+ 2016-03-05 14:21:58,771 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-03-05 14:21:58,788 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 16ms)
+ 2016-03-05 14:21:58,812 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-03-05 14:21:58,825 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 13ms)
+ 2016-03-05 14:21:58,826 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-03-05 14:21:58,839 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 13ms)
+ 2016-03-05 14:21:58,908 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-03-05 14:21:58,922 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 14ms)
+ 2016-03-05 14:21:58,923 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-03-05 14:21:58,936 [P9760/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 12ms)
+ 2016-03-05 14:22:14,546 [P9760/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:22:14,546 [P9760/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:22:14,740 [P9760/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:22:14,740 [P9760/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:22:15,743 [P9760/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:22:15,743 [P9760/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:22:16,744 [P9760/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:22:16,744 [P9760/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:22:17,746 [P9760/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:22:17,746 [P9760/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:22:18,747 [P9760/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:22:18,747 [P9760/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:22:33,783 [P9760/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:22:33,783 [P9760/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:22:33,801 [P9760/D2/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Core.Exceptions.UmbracoStartupFailedException: Umbraco cannot start. A connection string is configured but the Umbraco cannot connect to the database.
+   at Umbraco.Core.CoreBootManager.EnsureDatabaseConnection()
+   at Umbraco.Core.CoreBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   at Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2016-03-05 14:22:58,222 [P9760/D2/T13] ERROR UmbracoExamine.DataServices.UmbracoContentService - EXCEPTION OCCURRED reading GetAllUserPropertyNames
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.<>c__DisplayClass1.<ExecuteAction>b__0()
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction[TResult](Func`1 func)
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction(Action action)
+   at Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection, RetryPolicy retryPolicy)
+   at Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection)
+   at Umbraco.Core.Persistence.Database.OpenSharedConnection()
+   at Umbraco.Core.Persistence.Database.<Query>d__7`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at UmbracoExamine.DataServices.UmbracoContentService.GetAllUserPropertyNames()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:23:28,627 [P9760/D2/T14] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: InitializationError
+
+_shutDownMessage=Initialization Error
+HostingEnvironment initiated shutdown
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   at System.Web.HttpRuntime.AppDomainShutdownTimerCallback(Object state)
+   at System.Threading.TimerQueueTimer.CallCallbackInContext(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+   at System.Threading.TimerQueue.AppDomainTimerCallback()
+ 2016-03-05 14:37:47,407 [P9760/D3/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.4.0 application starting on ALOTPC
+ 2016-03-05 14:37:47,499 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-03-05 14:37:47,514 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 14ms)
+ 2016-03-05 14:37:47,578 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-03-05 14:37:47,896 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 318ms)
+ 2016-03-05 14:37:48,098 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-03-05 14:37:48,100 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 1ms)
+ 2016-03-05 14:37:48,101 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-03-05 14:37:48,105 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 3ms)
+ 2016-03-05 14:37:48,127 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-03-05 14:37:48,188 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 60ms)
+ 2016-03-05 14:37:48,189 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-03-05 14:37:48,195 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 6ms)
+ 2016-03-05 14:37:48,398 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-03-05 14:37:48,399 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 1ms)
+ 2016-03-05 14:37:48,399 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-03-05 14:37:48,400 [P9760/D3/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2016-03-05 14:38:03,703 [P9760/D3/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:38:03,703 [P9760/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:38:03,817 [P9760/D3/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:38:03,817 [P9760/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:38:04,818 [P9760/D3/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:38:04,819 [P9760/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:38:05,820 [P9760/D3/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:38:05,820 [P9760/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:38:06,820 [P9760/D3/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:38:06,820 [P9760/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:38:07,821 [P9760/D3/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:38:07,821 [P9760/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:38:22,856 [P9760/D3/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:38:22,856 [P9760/D3/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:38:22,857 [P9760/D3/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Core.Exceptions.UmbracoStartupFailedException: Umbraco cannot start. A connection string is configured but the Umbraco cannot connect to the database.
+   at Umbraco.Core.CoreBootManager.EnsureDatabaseConnection()
+   at Umbraco.Core.CoreBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   at Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2016-03-05 14:38:47,284 [P9760/D3/T77] ERROR UmbracoExamine.DataServices.UmbracoContentService - EXCEPTION OCCURRED reading GetAllUserPropertyNames
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.<>c__DisplayClass1.<ExecuteAction>b__0()
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction[TResult](Func`1 func)
+   at Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction(Action action)
+   at Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection, RetryPolicy retryPolicy)
+   at Umbraco.Core.Persistence.PetaPocoConnectionExtensions.OpenWithRetry(IDbConnection connection)
+   at Umbraco.Core.Persistence.Database.OpenSharedConnection()
+   at Umbraco.Core.Persistence.Database.<Query>d__7`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at UmbracoExamine.DataServices.UmbracoContentService.GetAllUserPropertyNames()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:39:17,410 [P9760/D3/T67] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: InitializationError
+
+_shutDownMessage=Initialization Error
+HostingEnvironment initiated shutdown
+HostingEnvironment caused shutdown
+
+_shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   at System.Environment.get_StackTrace()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   at System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   at System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   at System.Web.HttpRuntime.AppDomainShutdownTimerCallback(Object state)
+   at System.Threading.TimerQueueTimer.CallCallbackInContext(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+   at System.Threading.TimerQueue.AppDomainTimerCallback()
+ 2016-03-05 14:41:53,655 [P9760/D4/T85] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.4.0 application starting on ALOTPC
+ 2016-03-05 14:41:53,844 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-03-05 14:41:53,857 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Hash determined (took 12ms)
+ 2016-03-05 14:41:53,896 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-03-05 14:41:54,532 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 636ms)
+ 2016-03-05 14:41:54,813 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-03-05 14:41:54,814 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2016-03-05 14:41:54,814 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-03-05 14:41:54,816 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 2ms)
+ 2016-03-05 14:41:54,830 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-03-05 14:41:54,906 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 75ms)
+ 2016-03-05 14:41:54,906 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-03-05 14:41:54,911 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 5ms)
+ 2016-03-05 14:41:55,153 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-03-05 14:41:55,154 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2016-03-05 14:41:55,154 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-03-05 14:41:55,154 [P9760/D4/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2016-03-05 14:42:41,144 [P7844/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.4.0 application starting on ALOTPC
+ 2016-03-05 14:42:41,257 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-03-05 14:42:41,266 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 9ms)
+ 2016-03-05 14:42:41,331 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-03-05 14:42:41,610 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 278ms)
+ 2016-03-05 14:42:41,787 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-03-05 14:42:41,787 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+ 2016-03-05 14:42:41,787 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-03-05 14:42:41,789 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 1ms)
+ 2016-03-05 14:42:41,806 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-03-05 14:42:41,850 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 44ms)
+ 2016-03-05 14:42:41,851 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-03-05 14:42:41,856 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 5ms)
+ 2016-03-05 14:42:42,051 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-03-05 14:42:42,051 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 0ms)
+ 2016-03-05 14:42:42,052 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-03-05 14:42:42,052 [P7844/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 0ms)
+ 2016-03-05 14:42:57,319 [P7844/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:42:57,319 [P7844/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:42:57,430 [P7844/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:42:57,430 [P7844/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:42:58,432 [P7844/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:42:58,432 [P7844/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:42:59,433 [P7844/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:42:59,433 [P7844/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:43:00,433 [P7844/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:43:00,434 [P7844/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:43:01,434 [P7844/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:43:01,435 [P7844/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:43:16,473 [P7844/D2/T1] WARN  System.Data.IDbConnection - Configured database is reporting as not being available!. Exception: System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ---> System.ComponentModel.Win32Exception (0x80004005): The system cannot find the file specified
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Umbraco.Core.Persistence.DbConnectionExtensions.IsAvailable(IDbConnection connection)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+ 2016-03-05 14:43:16,473 [P7844/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = False
+ 2016-03-05 14:43:16,476 [P7844/D2/T1] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Core.Exceptions.UmbracoStartupFailedException: Umbraco cannot start. A connection string is configured but the Umbraco cannot connect to the database.
+   at Umbraco.Core.CoreBootManager.EnsureDatabaseConnection()
+   at Umbraco.Core.CoreBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Web.WebBootManager.Complete(Action`1 afterComplete)
+   at Umbraco.Core.UmbracoApplicationBase.StartApplication(Object sender, EventArgs e)
+   at Umbraco.Core.UmbracoApplicationBase.Application_Start(Object sender, EventArgs e)
+ 2016-03-05 14:55:32,130 [P9984/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.4.0 application starting on ALOTPC
+ 2016-03-05 14:55:32,161 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2016-03-05 14:55:32,176 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 15ms)
+ 2016-03-05 14:55:32,241 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplicationStartupHandler
+ 2016-03-05 14:55:33,353 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 0 (took 1111ms)
+ 2016-03-05 14:55:33,371 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2016-03-05 14:55:33,380 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 8ms)
+ 2016-03-05 14:55:33,381 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2016-03-05 14:55:33,391 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyValueConverter, found 0 (took 10ms)
+ 2016-03-05 14:55:33,410 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Mvc.SurfaceController
+ 2016-03-05 14:55:33,418 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 8ms)
+ 2016-03-05 14:55:33,419 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.WebApi.UmbracoApiController
+ 2016-03-05 14:55:33,429 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.WebApi.UmbracoApiController, found 0 (took 10ms)
+ 2016-03-05 14:55:33,503 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IThumbnailProvider
+ 2016-03-05 14:55:33,514 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 0 (took 10ms)
+ 2016-03-05 14:55:33,514 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Media.IImageUrlProvider
+ 2016-03-05 14:55:33,527 [P9984/D2/T1] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 0 (took 12ms)
+ 2016-03-05 14:55:34,527 [P9984/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-03-05 14:55:35,160 [P9984/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-03-05 14:55:35,162 [P9984/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2016-03-05 14:55:35,261 [P9984/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2016-03-05 14:55:35,277 [P9984/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2016-03-05 14:55:35,665 [P9984/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2016-03-05 14:55:35,701 [P9984/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3647ms)
+ 2016-03-05 14:55:39,775 [P9984/D2/T6] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:50345/umbraco (UmbracoModule request)
+ 2016-03-05 14:55:40,381 [P9984/D2/T6] INFO  umbraco.content - Load Xml from file...
+ 2016-03-05 14:55:40,552 [P9984/D2/T6] INFO  umbraco.content - Loaded Xml from file.
+ 2016-03-05 14:55:42,898 [P9984/D2/T6] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
+ 2016-03-05 14:55:42,916 [P9984/D2/T6] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 18ms)
+ 2016-03-05 14:55:45,706 [P9984/D2/T6] ERROR Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - Failed to build models.
+System.InvalidOperationException: The model class for content type with alias "message" is named "Message". CSharp does not support using the same name for the property with alias "message". Consider using an attribute to assign a different name to the property.
+   at Umbraco.ModelsBuilder.Building.Builder.Prepare() in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Building\Builder.cs:line 171
+   at Umbraco.ModelsBuilder.Building.Builder..ctor(IList`1 typeModels, ParseResult parseResult) in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Building\Builder.cs:line 84
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GenerateModelsCode(IDictionary`2 ourFiles, IList`1 typeModels) in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 280
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.GetModelsAssembly(Boolean forceRebuild) in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 222
+   at Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory.EnsureModels() in X:\Projects\Umbraco\ModelsBuilder\Zbu.ModelsBuilder\Umbraco.ModelsBuilder\Umbraco\PureLiveModelFactory.cs:line 144
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,945 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,946 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,946 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,946 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,946 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,946 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,946 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:45,946 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:49,399 [P9984/D2/T6] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2016-03-05 14:55:49,410 [P9984/D2/T6] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 10ms)
+ 2016-03-05 14:55:49,687 [P9984/D2/T6] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.cms.businesslogic.macro.IMacroEngine
+ 2016-03-05 14:55:49,703 [P9984/D2/T6] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.cms.businesslogic.macro.IMacroEngine, found 0 (took 16ms)
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,893 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,921 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,922 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,922 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,922 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,922 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,923 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,925 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,973 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,973 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,973 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,973 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,988 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,988 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,988 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,988 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,994 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,995 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,995 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,995 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,995 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:50,995 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:51,036 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:51,036 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:51,036 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:51,036 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:51,036 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:51,036 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,319 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,321 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,342 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,343 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,345 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,345 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,345 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,345 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,345 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,345 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,351 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,351 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,351 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,351 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,351 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,351 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,353 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,363 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,363 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,363 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,363 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,363 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,363 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,365 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,365 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,365 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,365 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,366 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,366 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,370 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,371 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,372 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,372 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,372 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,373 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,375 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,375 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,375 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,375 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,384 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,384 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,392 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,393 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,393 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,393 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,396 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,396 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,396 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,396 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,398 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,398 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,406 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,406 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,406 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,406 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,410 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,410 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,410 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,410 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,415 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,415 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,415 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,415 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,417 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,417 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,418 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,418 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,422 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,422 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,422 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,422 [P9984/D2/T6] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:55:53,667 [P9984/D2/T8] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2016-03-05 14:56:53,566 [P9984/D2/T9] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-04 14:56:53
+ 2016-03-05 14:58:36,609 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:36,609 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:36,610 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:36,610 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,055 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,055 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,055 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,055 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,056 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,057 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,057 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,057 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,057 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,057 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,057 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,058 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,059 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,060 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,061 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,061 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,061 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,061 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,061 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,061 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,062 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,062 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,062 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,062 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,062 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,062 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,063 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,064 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,065 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,065 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,065 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,065 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,066 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,066 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,066 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,066 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,067 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,067 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,067 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,067 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,067 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,067 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,068 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,068 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,068 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,068 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,069 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,069 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,069 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,069 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,069 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:39,070 [P9984/D2/T27] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:58:57,133 [P9984/D2/T10] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jane from IP address ::1
+ 2016-03-05 14:58:57,135 [P9984/D2/T10] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jane logged in from IP address ::1
+ 2016-03-05 14:58:57,331 [P9984/D2/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2016-03-05 14:58:57,340 [P9984/D2/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 8ms)
+ 2016-03-05 14:58:57,515 [P9984/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2016-03-05 14:58:57,527 [P9984/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 11ms)
+ 2016-03-05 14:58:57,709 [P9984/D2/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2016-03-05 14:58:57,709 [P9984/D2/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2016-03-05 14:58:57,712 [P9984/D2/T10] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-03-05 14:58:57,725 [P9984/D2/T10] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 12ms)
+ 2016-03-05 14:58:57,725 [P9984/D2/T11] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-03-05 14:58:57,735 [P9984/D2/T11] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 10ms)
+ 2016-03-05 14:59:12,031 [P9984/D2/T33] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Article item3' with Id '1072' has been published.
+ 2016-03-05 14:59:12,241 [P9984/D2/T33] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2016-03-05 14:59:12,252 [P9984/D2/T33] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 10ms)
+ 2016-03-05 14:59:12,324 [P9984/D2/T33] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:59:12,324 [P9984/D2/T33] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:59:12,325 [P9984/D2/T33] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:59:12,325 [P9984/D2/T33] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:59:12,326 [P9984/D2/T33] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:59:12,327 [P9984/D2/T33] WARN  Umbraco.ModelsBuilder.Umbraco.PureLiveModelFactory - No models.
+ 2016-03-05 14:59:16,291 [P9984/D2/T17] INFO  umbraco.content - Save Xml to file...
+ 2016-03-05 14:59:16,297 [P9984/D2/T11] INFO  umbraco.content - Saved Xml to file.
