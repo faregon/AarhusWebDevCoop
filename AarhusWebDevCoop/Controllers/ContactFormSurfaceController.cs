@@ -25,18 +25,6 @@ namespace AarhusWebDevCoop.Controllers
             message.Body = model.Message;
 
 
-            using (SmtpClient smtp = new SmtpClient())
-            {
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.UseDefaultCredentials = false;
-                smtp.EnableSsl = true;
-                smtp.Host = "smtp.gmail.com";
-                smtp.Port = 587;
-                smtp.Credentials = new System.Net.NetworkCredential("minko.todorov@gmail.com", "ekvitwkevwifxkbg");
-                smtp.EnableSsl = true;
-
-                smtp.Send(message);
-            }
             // Parameters – name, parentId, contentTypeAlias
             IContent comment = Services.ContentService.CreateContent(model.Subject, CurrentPage.Id, "Message");
 
