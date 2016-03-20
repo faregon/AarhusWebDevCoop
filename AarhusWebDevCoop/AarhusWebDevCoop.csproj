@@ -491,6 +491,7 @@
     <Content Include="Views\login.cshtml" />
     <Content Include="Views\forbiddenAccessPAge.cshtml" />
     <Content Include="Views\MacroPartials\Status.cshtml" />
+    <Content Include="Views\forbiddenAccess.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
