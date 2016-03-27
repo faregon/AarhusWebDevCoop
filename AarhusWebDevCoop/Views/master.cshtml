@@ -14,20 +14,13 @@
 	<title> Title</title>
 	</head>
 	<body>
-        
-            @Html.Partial("main_menu")
-	<div class="container">
-        <ol class="breadcrumb">
-            @foreach (var ancestor in Model.Content.Ancestors().Where(t => t.IsVisible()))
-            {
-            <li><a href="@ancestor.Url">@ancestor.Name</a></li>
-            }
-            <li class="active">@Model.Content.Name</li>
-        </ol>
-	@Umbraco.Field("header")
-	@RenderBody()
-	@Umbraco.Field("footer")
-				</div>
+		@Html.Partial("main_menu")
+		<div class="container">
+			@Umbraco.RenderMacro("Breadcrumbs")
+			@Umbraco.Field("header")
+			@RenderBody()
+			@Umbraco.Field("footer")
+		</div>
         <script src="~/Scripts/jquery-1.9.1.js"></script>
         <script src="~/Scripts/bootstrap.js"></script>
         <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
