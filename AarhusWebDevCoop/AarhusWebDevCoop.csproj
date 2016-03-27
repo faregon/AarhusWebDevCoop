@@ -517,7 +517,13 @@
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\MembersList.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\forbiddenAccess.cshtml" />
+=======
+
+    <Content Include="Views\forbiddenAccess.cshtml" />
+
+>>>>>>> d2a1af45e7e14368f7f79a31984248fc97ca9d01
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
