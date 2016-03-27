@@ -46,25 +46,25 @@
 							<ul class="dropdown-menu">
                                 @if (page.Name == "Our Projects") {
                                     <li class="dropdown-header">COMPLETED</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"20\")"))
+                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"8\")"))
                                     {
                                         var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
                                         <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
                                     }
 									<li class="dropdown-header">UNDER DEVELOPMENT</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"19\")"))
+                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"9\")"))
                                     {
                                         var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
                                         <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
                                     }
 									<li class="dropdown-header">INITIATED</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"18\")"))
+                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"11\")"))
                                     {
                                         var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
                                         <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
                                     }
 									<li class="dropdown-header">IDEA</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"17\")"))
+                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"10\")"))
                                     {
                                         var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
                                         <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
