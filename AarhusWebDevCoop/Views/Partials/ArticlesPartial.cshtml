@@ -1,0 +1,75 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+	
+<div class="row">
+<div class="col-md-12">		
+@{
+    var pageSize = 2;
+    var page = 1; int.TryParse(Request.QueryString["page"], out page);
+    var items = Umbraco.TypedContent(1069).Children().Where("Visible").OrderBy("CreateDate desc");
+    var totalPages = (int)Math.Ceiling((double)items.Count() / (double)pageSize);
+
+    if (page > totalPages)
+    {
+        page = totalPages;
+    }
+    else if (page < 1)
+    {
+        page = 1;
+    }
+}
+
+                <table class="table table-hover table-bordered">
+                    <thead>
+						<th>Writer</th>
+						<th>Title</th>
+						<th>Content</th>
+						<th>Create Date</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var article in items.Skip((page - 1) * pageSize).Take(pageSize))
+                        {
+                        <tr>
+							<a href="@article.Url">
+								<td><h3><small>@article.WriterName</small></h3></td>
+								<td><h3><small>@article["articleItemTitle"]</small></h3></td>
+								<td><h5><small>@article["articleContent"]</small></h5></td>
+								<td><h3><small>@article.CreateDate</small></h3></td>
+							</a>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                @if (totalPages > 1)
+                {
+                <div class="text-center">
+                    <nav>
+                        <div>
+                            <ul class="pagination pagination-lg">
+                                @{
+                                    if (page == 1) {
+                                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                    }
+                                    else if (page > 1)
+                                    {
+                                        <li><a href="?page=@(page-1)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                    }
+                                    for (int p = 1; p < totalPages + 1; p++)
+                                    {
+                                        var active = (p == page) ? "active" : null;
+                                        <li class="@active"><a href="?page=@p">@p<span class="sr-only">(current)</span></a></li>
+                                    }
+                                    if (page == totalPages) {
+                                        <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                    }
+                                    else if (page < totalPages)
+                                    {
+                                        <li><a href="?page=@(page+1)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                }
+		</div>
+	</div>
