@@ -507,7 +507,7 @@
     <Content Include="Views\login.cshtml" />
     <Content Include="Views\forbiddenAccessPAge.cshtml" />
     <Content Include="Views\MacroPartials\Status.cshtml" />
-<<<<<<< HEAD
+
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Media.cshtml" />
@@ -517,9 +517,7 @@
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\MembersList.cshtml" />
-=======
     <Content Include="Views\forbiddenAccess.cshtml" />
->>>>>>> 669ce5ba678597cecf8a11ca3e9be3fc166705c8
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
