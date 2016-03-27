@@ -9,7 +9,7 @@
 
 @{
     var loginModel = new LoginModel();
-    
+
     Html.EnableClientValidation();
     Html.EnableUnobtrusiveJavaScript();
     Html.RequiresJs("/umbraco_client/ui/jquery.js");
@@ -19,24 +19,37 @@
 
 @* NOTE: This RenderJsHere code should be put on your main template page where the rest of your script tags are placed *@
 @Html.RenderJsHere()
-    
-@using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin"))
+
+@if (!Members.GetCurrentLoginStatus().IsLoggedIn)
 {
-    <fieldset>
-        <legend>Login</legend>
-        
-        @Html.ValidationSummary("loginModel", true)
+    using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin"))
+    {
+        <fieldset>
+            <legend>Login</legend>
 
-        @Html.LabelFor(m => loginModel.Username)
-        @Html.TextBoxFor(m => loginModel.Username)
-        @Html.ValidationMessageFor(m => loginModel.Username)
-        <br />
+            @Html.ValidationSummary("loginModel", true)
 
-        @Html.LabelFor(m => loginModel.Password)
-        @Html.PasswordFor(m => loginModel.Password)
-        @Html.ValidationMessageFor(m => loginModel.Password)
-        <br />
+            @Html.LabelFor(m => loginModel.Username)
+            @Html.TextBoxFor(m => loginModel.Username, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => loginModel.Username)
+            <br />
 
-        <button>Login</button>
-    </fieldset>  
+            @Html.LabelFor(m => loginModel.Password)
+            @Html.PasswordFor(m => loginModel.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => loginModel.Password)
+            <br />
+
+            <button class="btn btn-sm btn-default">Login</button>
+        </fieldset>
+    }
+}
+else {
+    <p>You are currently logged in as @Members.GetCurrentLoginStatus().Name</p>
+    var logoutModel = new PostRedirectModel();
+    logoutModel.RedirectUrl = "/";
+    using (Html.BeginUmbracoForm<UmbLoginStatusController>("HandleLogout"))
+    {
+        <button class="btn btn-sm btn-default">Logout</button>
+        @Html.HiddenFor(m => logoutModel.RedirectUrl)
+    }
 }

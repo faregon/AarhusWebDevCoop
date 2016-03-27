@@ -19,13 +19,13 @@
 
 
 
-        <li>@(members.IndexOf(member) + 1)</li>
-        <li>@Umbraco.Field("photo")</li>
-        <li>
+        ID: <li>@(members.IndexOf(member) + 1)</li>
+        Photo:<li>@Umbraco.Field("photo")</li>
+        Name:  <li>
             @member.GetValue("firstName") @member.GetValue("lastName")
         </li>
 
-        <li>
+        Skills:  <li>
             @{    String[] skills = member.GetValue("skills").ToString().Split(',');
                 string skillString = string.Join(", ", from skill in skills
                                                        select umbraco.library.GetPreValueAsString(Convert.ToInt32(skill)));
@@ -36,13 +36,13 @@
                 <span>@skillString</span>
             }
         </li>
-        <li>
+      Address:  <li>
             @member.GetValue("address")
         </li>
-        <li>
+        City:<li>
             @member.GetValue("zip") @member.GetValue("city")
         </li>
-        <li>
+        Email:<li>
             @member.Email
         </li>
                 }
