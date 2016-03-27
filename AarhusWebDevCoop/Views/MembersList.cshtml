@@ -1,0 +1,44 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+	Layout = "master.cshtml";
+}
+
+@{
+	var memberService = ApplicationContext.Current.Services.MemberService;
+	var members = memberService.GetMembersByGroup("Active");
+}
+
+<table class="table">
+	<thead>
+		<th>#</th>
+		<th>ID</th>
+		<th>NAME</th>
+		<th>SKILLS</th>
+		<th>ADDRESS</th>
+		<th>CITY</th>
+		<th>EMAIL</th>
+	</thead>
+	<tbody>
+
+@foreach (var member in members) {
+	<tr>
+		<td>@(members.IndexOf(member)+1)</td>
+		<td>@member.Id</td>
+		<td>@member.GetValue("firstName") @member.GetValue("lastName")</td>
+		<td>
+			@{
+				String[] skills = member.GetValue("skills").ToString().Split(',');
+				string skillString = string.Join(", ", from skill in skills
+												 select umbraco.library.GetPreValueAsString(Convert.ToInt32(skill)));
+				
+				<span>@skillString</span>
+			}
+		</td>
+		<td>@member.GetValue("address")</td>
+		<td>@member.GetValue("zip") @member.GetValue("city")</td>
+		<td>@member.Email</td>
+	</tr>
+}
+	</tbody>
+</table>
