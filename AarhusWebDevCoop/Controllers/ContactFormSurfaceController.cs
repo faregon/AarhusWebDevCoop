@@ -64,7 +64,7 @@ namespace AarhusWebDevCoop.Controllers
 
 
             // Save and Publish
-            Services.ContentService.SaveAndPublishWithStatus(message, model.Name, true);
+            Services.ContentService.SaveAndPublishWithStatus(message);
 
             TempData["success"] = true;    
             return RedirectToCurrentUmbracoPage();

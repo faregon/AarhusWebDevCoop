@@ -29,7 +29,9 @@
         <ol>
             @foreach (var item in selection)
             {
-				if (item.Name == "Site Map") { } else {
+				if (item.Name == "Site Map") { }
+				else if (item.Name == "Contact Us") { <li class="level-@item.Level"><a href="@item.Url">@item.Name</a></li> }
+				else {
                 <li class="level-@item.Level">
                     <a href="@item.Url">@item.Name</a>
 
