@@ -10,10 +10,8 @@
 
 @{ var selection = CurrentPage.Site(); }
 
-<div class="sitemap">
-    @* Render the sitemap by passing the root node to the traverse helper, below *@
-    @Traverse(selection)
-</div>
+@* Render the sitemap by passing the root node to the traverse helper, below *@
+@Traverse(selection)
 
 
 @* Helper method to travers through all descendants *@
@@ -28,16 +26,18 @@
     @* If any items are returned, render a list *@
     if (selection.Any())
     {
-        <ul>
+        <ol>
             @foreach (var item in selection)
             {
+				if (item.Name == "Site Map") { } else {
                 <li class="level-@item.Level">
                     <a href="@item.Url">@item.Name</a>
 
                     @* Run the traverse helper again for any child pages *@
                     @Traverse(item)
                 </li>
+				}
             }
-        </ul>
+        </ol>
     }
 }

@@ -1,0 +1,13 @@
+﻿ 2016-03-28 01:00:48,152 [P3148/D4/T738] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-27 01:00:48
+ 2016-03-28 05:00:48,197 [P3148/D4/T780] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-27 05:00:48
+ 2016-03-28 09:00:48,240 [P3148/D4/T678] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-27 09:00:48
+ 2016-03-28 12:44:33,836 [P3148/D4/T618] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - Login attempt failed for username pecata from IP address ::1, the user does not exist
+ 2016-03-28 12:44:33,838 [P3148/D4/T618] INFO  Umbraco.Web.Mvc.UmbracoPageResult - Executing Umbraco RouteDefinition controller
+ 2016-03-28 12:44:33,863 [P3148/D4/T618] INFO  Umbraco.Web.Mvc.UmbracoPageResult - Finished (took 24ms)
+ 2016-03-28 12:44:48,032 [P3148/D4/T618] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - Login attempt succeeded for username day9 from IP address ::1
+ 2016-03-28 13:00:48,296 [P3148/D4/T678] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-27 13:00:48
+ 2016-03-28 13:41:39,687 [P3148/D4/T827] INFO  UmbracoExamine.DataServices.UmbracoLogService - Field "email" is listed multiple times in the index set "InternalMemberIndexSet". Please ensure all names are unique, Provider=InternalMemberIndexer, NodeId=1132
+ 2016-03-28 17:00:48,350 [P3148/D4/T780] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-27 17:00:48
+ 2016-03-28 17:43:57,117 [P3148/D4/T44] INFO  umbraco.content - Save Xml to file...
+ 2016-03-28 17:43:57,124 [P3148/D4/T678] INFO  umbraco.content - Saved Xml to file.
+ 2016-03-28 21:00:48,408 [P3148/D4/T780] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-03-27 21:00:48

@@ -10,16 +10,63 @@
 
         <link href="~/css/style.css" rel="stylesheet" />
         <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+	
+		<link href="~/css/portalcss.css" rel="stylesheet" />
        
 	<title> Title</title>
 	</head>
 	<body>
-		@Html.Partial("main_menu")
+		<img src="/media/1006/awdc-logo-text-only.png" alt="logo" class="center-block" /><br />
 		<div class="container">
+			@Html.Partial("main_menu")
 			@Umbraco.RenderMacro("Breadcrumbs")
 			@Umbraco.Field("header")
+			<br /><br />
 			@RenderBody()
-			@Umbraco.Field("footer")
+			<br /><br />
+			<div class="well well-lg">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+							<h3 class="panel-title">Contact Info</h3>
+							</div>
+							<div class="panel-body">
+								<address>
+									<strong>Aarhus Web Devemepment Coorporation</strong><br>
+									Silkeborgvej 500<br>
+									Brabrand 8220, Danmark<br>
+									<abbr title="Phone">P:</abbr> 0045 55 50 60 66
+								</address>
+
+								<address>
+									<strong>Petko Petkov</strong><br>
+									<a href="mailto:#">petko.petkov@gmail.com</a>
+								</address>
+
+								<address>
+									<strong>Minko Todorov</strong><br>
+									<a href="mailto:#">minko.tod@gmail.com</a>
+								</address>
+
+								<blockquote>
+									<p>Only the ones that control the chaos will survive.</p>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Short Navigation</h3>
+							</div>
+							<div class="panel-body">
+								@Umbraco.RenderMacro("SiteMap")
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
         <script src="~/Scripts/jquery-1.9.1.js"></script>
         <script src="~/Scripts/bootstrap.js"></script>

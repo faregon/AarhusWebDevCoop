@@ -1,0 +1,220 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Articles <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                @foreach (var item in Umbraco.TypedContent(1069).Children.Where("Visible"))
+                {
+                    <li role="presentation" class=""><a href="#@item.UrlName" aria-controls="@item.UrlName" role="tab" data-toggle="tab">@item.Name</a></li>
+                }
+            </ul>
+        </li>
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Our Projects <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                    @{ var page = Umbraco.TypedContent(1073); }
+                    <li class="dropdown-header">COMPLETED</li>
+                    @foreach (var item in page.Children.Where("Visible").Where("projectStatus.Contains(\"11\")"))
+                    {
+                        <li role="presentation" class=""><a href="#@item.UrlName" aria-controls="@item.UrlName" role="tab" data-toggle="tab">@item.Name</a></li>
+                    }
+                    <li class="dropdown-header">UNDER DEVELOPMENT</li>
+                    @foreach (var item in page.Children.Where("Visible").Where("projectStatus.Contains(\"10\")"))
+                    {
+                        <li role="presentation" class=""><a href="#@item.UrlName" aria-controls="@item.UrlName" role="tab" data-toggle="tab">@item.Name</a></li>
+                    }
+                    <li class="dropdown-header">INITIATED</li>
+                    @foreach (var item in page.Children.Where("Visible").Where("projectStatus.Contains(\"9\")"))
+                    {
+                        <li role="presentation" class=""><a href="#@item.UrlName" aria-controls="@item.UrlName" role="tab" data-toggle="tab">@item.Name</a></li>
+                    }
+                    <li class="dropdown-header">IDEA</li>
+                    @foreach (var item in page.Children.Where("Visible").Where("projectStatus.Contains(\"8\")"))
+                    {
+                        <li role="presentation" class=""><a href="#@item.UrlName" aria-controls="@item.UrlName" role="tab" data-toggle="tab">@item.Name</a></li>
+                    }
+                
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="tab-content">
+    @foreach (var article in Umbraco.TypedContent(1069).Children.Where("Visible"))
+    {
+        <div role="tabpanel" class="tab-pane fade" id="@article.UrlName">
+            <br />
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">
+                            @article["articleTitle"]
+                    </div>
+                    <div class="panel-body">
+                        <div class="page-header" style="margin-top: -15px;">
+                            <h2>@article["articleTitle"]<small> by @article.WriterName</small></h2>
+                        </div>
+                        <p class="">@article["articleContent"]</p>
+                    </div>
+                    <!-- Table -->
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <th><h5>Create Date</h5></th>
+                        <th><h5>Name</h5></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><h3><small>@article.CreateDate</small></h3></td>
+                                <td><h3><small>@article.WriterName</small></h3></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="panel panel-warning">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Detailed Information</div>
+                    <div class="panel-body">
+                        <p>Article Image</p>
+                    </div>
+                    <!-- List group -->
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Writer Name: <strong>@article.WriterName (<code>@article.WriterId</code>)</strong>
+                        </li>
+                        <li class="list-group-item">
+                            Article Name and ID: <strong>@article.Name (<code>@article.Id</code>)</strong>
+                        </li>
+                        <li class="list-group-item">
+                            Create Date: <strong>@article.CreateDate</strong>
+                        </li>
+                        <li class="list-group-item">
+                            Update Date: <strong>@article.UpdateDate</strong>
+                        </li>
+                        <li class="list-group-item">
+                            Category: <strong>@article</strong>
+                        </li>
+                        <li class="list-group-item">
+                            Current Page ID: <code>@article.Id</code>
+                        </li>
+                        <li class="list-group-item">
+                            Current Page URL: <a href="@article.Url">@article.Url</a>
+                        </li>
+                        <li class="list-group-item">
+                            Meta Description: <strong>@article["metaDescription"]</strong>
+                        </li>
+                        <li class="list-group-item">
+                            Meta Keywords: <strong>@article["metaKeywords"]</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    }
+    @foreach (var project in Umbraco.TypedContent(1073).Children.Where("Visible"))
+    {
+        <div role="tabpanel" class="tab-pane fade" id="@project.UrlName">
+
+            <br />
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">
+                            @project["projectTitle"] (@{
+                                var psTitle = umbraco.library.GetPreValueAsString(Convert.ToInt32(@project["projectStatus"]));
+                                if (psTitle == "Completed") {<span class="label label-success text-uppercase">@psTitle</span>}
+                                else if (psTitle == "Under development") {<span class="label label-primary text-uppercase">@psTitle</span>}
+                                else if (psTitle == "Initiated") {<span class="label label-warning text-uppercase">@psTitle</span>}
+                                else if (psTitle == "Idea") {<span class="label label-info text-uppercase">@psTitle</span>}
+                                else {<span class="label label-danger text-uppercase">unknown</span>}
+                                })
+                        </div>
+                        <div class="panel-body">
+                            <div class="page-header" style="margin-top: -15px;">
+                                <h2>@project["projectTitle"]<small> by @project.WriterName</small></h2>
+                            </div>
+                            <p class="">@project["projectDescription"]</p>
+                        </div>
+                        <!-- Table -->
+                        <table class="table table-hover table-bordered">
+                            <thead>
+                            <th><h5>Create Date</h5></th>
+                            <th><h5>Name</h5></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><h3><small>@project.CreateDate</small></h3></td>
+                                    <td><h3><small>@project.WriterName</small></h3></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="panel panel-warning">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Detailed Information</div>
+                        <div class="panel-body">
+                            <p>Article Image</p>
+                        </div>
+                        <!-- List group -->
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                Writer Name: <strong>@project.WriterName (<code>@project.WriterId</code>)</strong>
+                            </li>
+                            <li class="list-group-item">
+                                Article Name and ID: <strong>@project.Name (<code>@project.Id</code>)</strong>
+                            </li>
+                            <li class="list-group-item">
+                                Create Date: <strong>@project.CreateDate</strong>
+                            </li>
+                            <li class="list-group-item">
+                                Update Date: <strong>@project.UpdateDate</strong>
+                            </li>
+                            <li class="list-group-item">
+                                @{
+                                    var projectStatus = umbraco.library.GetPreValueAsString(Convert.ToInt32(@project["projectStatus"]));
+                                    if (projectStatus == "Completed")
+                                    { <h3 style="margin-top: 10px;">Status: <span class="label label-success text-uppercase">@projectStatus</span></h3> }
+                                    else if (projectStatus == "Under development")
+                                    { <h3 style="margin-top: 10px;">Status: <span class="label label-primary text-uppercase">@projectStatus</span></h3> }
+                                    else if (projectStatus == "Initiated")
+                                    { <h3 style="margin-top: 10px;">Status: <span class="label label-warning text-uppercase">@projectStatus</span></h3> }
+                                    else if (projectStatus == "Idea")
+                                    { <h3 style="margin-top: 10px;">Status: <span class="label label-info text-uppercase">@projectStatus</span></h3> }
+                                    else { <h3 style="margin-top: 10px;">Status: <span class="label label-danger text-uppercase">unknown</span></h3> }
+                                }
+                            </li>
+                            <li class="list-group-item">
+                                Current Page ID: <code>@project.Id</code>
+                            </li>
+                            <li class="list-group-item">
+                                Current Page URL: <a href="@project.Url">@project.Url</a>
+                            </li>
+                            <li class="list-group-item">
+                                Meta Description: <strong>@project["metaDescription"]</strong>
+                            </li>
+                            <li class="list-group-item">
+                                Meta Keywords: <strong>@project["metaKeywords"]</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

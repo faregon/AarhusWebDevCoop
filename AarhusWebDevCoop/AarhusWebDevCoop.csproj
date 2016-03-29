@@ -481,6 +481,7 @@
     <Content Include="Views\MembersList.cshtml" />
     <Content Include="Views\forbiddenAccess.cshtml" />
     <Content Include="Views\forbiddenAccess.cshtml" />
+
     <Content Include="Views\MacroPartials\Active Members.cshtml" />
     <Content Include="Views\MacroPartials\Prospect Members.cshtml" />
     <Content Include="Views\MacroPartials\Register.cshtml" />
