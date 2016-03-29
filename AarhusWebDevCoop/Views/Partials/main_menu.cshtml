@@ -41,27 +41,23 @@
                     if (page.Name == "Contact Us") {
                         <li class="@current"><a href="@page.Url">@page.Name</a></li>
                     }
-					else if (page.Name == "Articles") {
-					
-						<!-- Split button -->
-						<div class="btn-group">
-							<button type="button" class="btn btn-danger">Action</button>
-								<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="caret"></span>
-								<span class="sr-only">Toggle Dropdown</span>
-							</button>
+					else if (page.Name == "Articles Main") {
+						<li class="@current"><a href="@page.Url">@page.Name</a></li>
+						<li class="dropdown">
+							<a href="@page.Url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp;<span class="caret"></span>&nbsp;</a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#">Separated link</a></li>
+								<li class="dropdown-header">ARTICLES</li>
+								@foreach (var subPage in page.Children.Where("Visible"))
+                                {
+                                    var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
+                                    <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
+                                }
 							</ul>
-						</div>
-					}
-					 else if (page.Level >= 2 && page.Children.Where("Visible").Any() && page.Name == "Our Projects") {
-					    <li class="@current dropdown">
-							<a href="@page.Url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@page.Name <span class="caret"></span></a>
+						</li>
+					} else if (page.Level >= 2 && page.Children.Where("Visible").Any() && page.Name == "Our Projects") {
+						<li class="@current"><a href="@page.Url">@page.Name</a></li>
+					    <li class="dropdown">
+							<a href="@page.Url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">&nbsp;<span class="caret"></span>&nbsp;</a>
 							<ul class="dropdown-menu">
                                 @if (page.Name == "Our Projects") {
                                     <li class="dropdown-header">COMPLETED</li>

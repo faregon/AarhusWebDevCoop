@@ -1,9 +1,17 @@
-﻿@{
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
 	Layout = "master.cshtml";
 }
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-<img src='@Umbraco.Field("logo")' alt="logo" />
-@Umbraco.Field("siteTitle")
-@Umbraco.Field("mainContent")
-	@Umbraco.RenderMacro("NewProjects")
-	
+
+
+<div class="jumbotron">
+	<div class="container">
+		<div class="page-header">
+			<h1>@Umbraco.Field("siteTitle")<br /><small>@Umbraco.Field("headline")</small></h1>
+		</div>
+		<p><h5>@Umbraco.Field("mainContent")<h5></p>
+		<p><a class="btn btn-primary btn-lg" href="/about-us/" role="button">@Umbraco.Field("footer")</a></p>
+	</div>
+</div>
+
+@Html.Partial("IndexTabsPartial")

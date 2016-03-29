@@ -1,7 +1,34 @@
-﻿
-
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+	
 @{
 	Layout = "master.cshtml";
 }
-@Umbraco.RenderMacro("SiteMap")
+
+
+	
+<div class="row">
+	<div class="col-md-8">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">This is our sitemap</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="sitemap">
+				@Umbraco.RenderMacro("SiteMap")
+			</div>
+		  </div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">This is a nice view</h3>
+		  </div>
+		  <div class="panel-body">
+			<div class="sitemap">
+				
+			</div>
+		  </div>
+		</div>
+	</div>
+</div>

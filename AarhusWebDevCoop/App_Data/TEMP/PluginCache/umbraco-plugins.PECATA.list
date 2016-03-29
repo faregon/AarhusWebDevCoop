@@ -304,4 +304,9 @@
     <add type="umbraco.editorControls.MultiNodeTreePicker.FilteredContentTree, umbraco.editorControls, Version=1.0.5921.28481, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.editorControls.MultiNodeTreePicker.FilteredMediaTree, umbraco.editorControls, Version=1.0.5921.28481, Culture=neutral, PublicKeyToken=null" />
   </baseType>
+  <baseType type="Umbraco.Web.Editors.IEditorValidator" resolutionType="FindAllTypes">
+    <add type="Umbraco.ModelsBuilder.Validation.ContentTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.2.93, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.ModelsBuilder.Validation.MediaTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.2.93, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.ModelsBuilder.Validation.MemberTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.2.93, Culture=neutral, PublicKeyToken=null" />
+  </baseType>
 </plugins>
