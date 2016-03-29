@@ -61,10 +61,10 @@ namespace AarhusWebDevCoop.Controllers
             message.SetValue("subject", model.Subject);
             message.SetValue("message", model.Message);
 
-
+            Services.ContentService.Save(message);
 
             // Save and Publish
-            Services.ContentService.SaveAndPublishWithStatus(message);
+            // Services.ContentService.SaveAndPublishWithStatus(message);
 
             TempData["success"] = true;    
             return RedirectToCurrentUmbracoPage();
