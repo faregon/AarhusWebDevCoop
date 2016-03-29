@@ -1,12 +1,8 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 
-<<<<<<< HEAD
-<nav class="navbar navbar-default">
-=======
 
 
 <nav class="navbar navbar-default navbar-static-top">
->>>>>>> 02adffa44b8425db8e4f6d0c00dfe12ed29872d5
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -18,16 +14,15 @@
             </button>
             <a class="navbar-brand" href="/">AarhusWebDevCoop</a>
         </div>
-<<<<<<< HEAD
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 @{
                     var maxLevelForNav = 4;
-                    var root = CurrentPage.AncestorOrSelf(1);
+                    var home = CurrentPage.AncestorOrSelf(1);
 
-                    @RenderNavForNode(root, 1);
+                    @RenderNavForNode(home, 1);
 
-                    foreach (var page in root.Children.Where("Visible"))
+                    foreach (var page in home.Children.Where("Visible"))
                     {
                         @RenderNavForNode(page, maxLevelForNav);
                     }
@@ -43,8 +38,11 @@ if (page.Children.Where("Visible").Any() && page.Level < maxLevel)
             @RenderNavForNode(subPage, maxLevel)
     }
 }
-
-if (page.Level >= 2 && page.Children.Where("Visible").Any())
+if (page.Name == "Contact Us")
+{
+        <li class="@current"><a href="@page.Url">@page.Name</a></li>
+}
+else if (page.Level >= 2 && page.Children.Where("Visible").Any() && page.Name == "Our Projects")
 {
         <li class="@current dropdown">
             <a href="@page.Url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@page.Name <span class="caret"></span></a>
@@ -52,25 +50,25 @@ if (page.Level >= 2 && page.Children.Where("Visible").Any())
                 @if (page.Name == "Our Projects")
                 {
                     <li class="dropdown-header">COMPLETED</li>
-                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"8\")"))
-                    {
-                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                    }
-                    <li class="dropdown-header">UNDER DEVELOPMENT</li>
-                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"9\")"))
-                    {
-                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                    }
-                    <li class="dropdown-header">INITIATED</li>
                     foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"11\")"))
                     {
                         var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
                         <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
                     }
-                    <li class="dropdown-header">IDEA</li>
+                    <li class="dropdown-header">UNDER DEVELOPMENT</li>
                     foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"10\")"))
+                    {
+                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
+                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
+                    }
+                    <li class="dropdown-header">INITIATED</li>
+                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"9\")"))
+                    {
+                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
+                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
+                    }
+                    <li class="dropdown-header">IDEA</li>
+                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"8\")"))
                     {
                         var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
                         <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
@@ -86,90 +84,16 @@ if (page.Level >= 2 && page.Children.Where("Visible").Any())
             </ul>
         </li>
 }
-else if (page.Level == 1)
-{ // showing pages of level 1
-        <li class="@current"><a href="@page.Url">@page.Name</a></li>
-}
 else if (page.Level == 2)
 { // showing pages of level 2 with no subpages
+        <li class="@current"><a href="@page.Url">@page.Name</a></li>
+}
+else if (page.Level == 1)
+{ // showing pages of level 1
         <li class="@current"><a href="@page.Url">@page.Name</a></li>
 }
 }
             </ul>
         </div>
-=======
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				@{
-					var maxLevelForNav = 4;
-					var home = CurrentPage.AncestorOrSelf(1);
-
-					@RenderNavForNode(home, 1);
-
-					foreach (var page in home.Children.Where("Visible"))
-					{
-						@RenderNavForNode(page, maxLevelForNav);
-					}
-				}
-				@helper RenderNavForNode(dynamic page, int maxLevel)
-				{
-					var current = CurrentPage.Id == page.Id ? "active" : null;
-
-					if (page.Children.Where("Visible").Any() && page.Level < maxLevel)
-					{
-						foreach (var subPage in page.Children.Where("Visible"))
-						{
-							@RenderNavForNode(subPage, maxLevel)
-						}
-					}
-                    if (page.Name == "Contact Us") {
-                        <li class="@current"><a href="@page.Url">@page.Name</a></li>
-                    } else if (page.Level >= 2 && page.Children.Where("Visible").Any() && page.Name == "Our Projects") {
-					    <li class="@current dropdown">
-							<a href="@page.Url" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@page.Name <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-                                @if (page.Name == "Our Projects") {
-                                    <li class="dropdown-header">COMPLETED</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"11\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
-									<li class="dropdown-header">UNDER DEVELOPMENT</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"10\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
-									<li class="dropdown-header">INITIATED</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"9\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
-									<li class="dropdown-header">IDEA</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"8\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
-                                } else {
-								    foreach (var subPage in page.Children.Where("Visible"))
-								    {
-								        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-								        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
-                                }
-							</ul>
-						</li>
-					} else if (page.Level == 2) { // showing pages of level 2 with no subpages
-						<li class="@current"><a href="@page.Url">@page.Name</a></li>
-					} else if (page.Level == 1) { // showing pages of level 1
-						<li class="@current"><a href="@page.Url">@page.Name</a></li>
-					}
-				}
-			</ul>
-		</div>
->>>>>>> 02adffa44b8425db8e4f6d0c00dfe12ed29872d5
     </div><!-- /.container-fluid -->
 </nav>

@@ -480,9 +480,11 @@
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\MembersList.cshtml" />
     <Content Include="Views\forbiddenAccess.cshtml" />
-
     <Content Include="Views\forbiddenAccess.cshtml" />
-
+    <Content Include="Views\MacroPartials\Active Members.cshtml" />
+    <Content Include="Views\MacroPartials\Prospect Members.cshtml" />
+    <Content Include="Views\MacroPartials\Register.cshtml" />
+    <Content Include="Views\MacroPartials\Breadcrumbs.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

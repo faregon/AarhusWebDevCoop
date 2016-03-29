@@ -4,46 +4,5 @@
 	Layout = "master.cshtml";
 }
 
-@{
-	var memberService = ApplicationContext.Current.Services.MemberService;
-	var members = memberService.GetMembersByGroup("Active");
-}
-
-
-
-
-
-<ul class="members-list">
-    @foreach (var member in members)
-    {
-
-
-
-        ID: <li>@(members.IndexOf(member) + 1)</li>
-        Photo:<li>@Umbraco.Field("photo")</li>
-        Name:  <li>
-            @member.GetValue("firstName") @member.GetValue("lastName")
-        </li>
-
-        Skills:  <li>
-            @{    String[] skills = member.GetValue("skills").ToString().Split(',');
-                string skillString = string.Join(", ", from skill in skills
-                                                       select umbraco.library.GetPreValueAsString(Convert.ToInt32(skill)));
-
-
-
-
-                <span>@skillString</span>
-            }
-        </li>
-      Address:  <li>
-            @member.GetValue("address")
-        </li>
-        City:<li>
-            @member.GetValue("zip") @member.GetValue("city")
-        </li>
-        Email:<li>
-            @member.Email
-        </li>
-                }
-</ul>
+@Umbraco.RenderMacro("ActiveMembers")
+	@Umbraco.RenderMacro("ProspectMembers")

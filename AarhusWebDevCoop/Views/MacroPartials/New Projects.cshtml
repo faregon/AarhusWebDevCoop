@@ -3,7 +3,7 @@
 	
 
 @{
-	var selection = CurrentPage.Site().FirstChild("projectsMain").Children("projectItem").Where("Visible").OrderBy("CreateDate");
+	var selection = CurrentPage.Site().FirstChild("projectsMain").Children("projectItem").Where("Visible && projectStatus.Contains(\"11\")").OrderBy("CreateDate");
 }
 <ul>
 	@foreach(var item in selection){
