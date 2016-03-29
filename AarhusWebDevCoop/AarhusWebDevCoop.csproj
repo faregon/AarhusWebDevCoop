@@ -520,6 +520,9 @@
     <Content Include="Views\MacroPartials\ContactFormMessages.cshtml" />
     <Content Include="Views\Partials\ArticlesPartial.cshtml" />
     <Content Include="Views\Partials\IndexTabsPartial.cshtml" />
+    <Content Include="Views\MacroPartials\Active Members.cshtml" />
+    <Content Include="Views\Partials\ProjectsPartial.cshtml" />
+    <Content Include="Views\MacroPartials\Prospect Members.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
