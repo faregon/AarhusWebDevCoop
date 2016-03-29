@@ -4066,3 +4066,7 @@ System.Web.HttpCompileException (0x80004005): d:\OneDrive\Documents\WEB DEVELOPM
  2016-03-29 12:44:08,710 [P16860/D2/T84] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 35ms)
  2016-03-29 12:44:14,114 [P16860/D2/T62] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
  2016-03-29 12:44:14,115 [P16860/D2/T62] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2016-03-29 12:48:39,688 [P16860/D2/T13] INFO  umbraco.content - Save Xml to file...
+ 2016-03-29 12:48:39,696 [P16860/D2/T60] INFO  umbraco.content - Saved Xml to file.
+ 2016-03-29 12:48:50,065 [P16860/D2/T59] INFO  umbraco.content - Save Xml to file...
+ 2016-03-29 12:48:50,070 [P16860/D2/T59] INFO  umbraco.content - Saved Xml to file.
