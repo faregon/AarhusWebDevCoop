@@ -30,7 +30,7 @@
                         {
                         <tr>
                             <td><h3><small>@project.CreateDate</small></h3></td>
-                            <td><h3><small>@project["projectTitle"]</small></h3></td>
+                            <td><h3><a href="@project.Url"><small>@project["projectTitle"]</small></a></h3></td>
                             <td><h5><small>@project["projectDescription"]</small></h5></td>
                             <td><h3><small>@umbraco.library.GetPreValueAsString(Convert.ToInt32(@project["projectStatus"]))</small></h3></td>
                         </tr>

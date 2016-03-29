@@ -416,9 +416,24 @@
     <Content Include="Config\Lang\ru-RU.user.xml" />
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
+    <Content Include="Content\imgs\day9.JPG" />
+    <Content Include="Content\imgs\leeming.JPG" />
+    <Content Include="css\portalcss.css" />
+    <Content Include="css\style.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
+    <Content Include="media\1001\0ytgv.jpg" />
+    <Content Include="media\1001\0ytgv_big-thumb.jpg" />
+    <Content Include="media\1001\0ytgv_thumb.jpg" />
+    <Content Include="media\1002\images.jpg" />
+    <Content Include="media\1002\images_thumb.jpg" />
+    <Content Include="media\1003\day9.jpg" />
+    <Content Include="media\1004\leeming.jpg" />
+    <Content Include="media\1004\logo.png" />
+    <Content Include="media\1005\top-background-net.png" />
+    <Content Include="media\1006\awdc-logo-text-only.png" />
+    <Content Include="media\1007\top-background-net2.png" />
     <Content Include="packages.config" />
     <Content Include="bin\AarhusWebDevCoop.dll.config" />
     <Content Include="bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
@@ -444,6 +459,7 @@
     <Content Include="Config\404handlers.config" />
     <None Include="Properties\PublishProfiles\aarhuswebdevc00p.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Properties\PublishProfiles\aarhuswebdevc00p.pubxml.user" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -483,12 +499,12 @@
     <Content Include="Views\forbiddenAccess.cshtml" />
     <Content Include="Views\MacroPartials\Active Members.cshtml" />
     <Content Include="Views\MacroPartials\Prospect Members.cshtml" />
-    <Content Include="Views\MacroPartials\Register.cshtml" />
     <Content Include="Views\MacroPartials\Breadcrumbs.cshtml" />
     <Content Include="Views\MacroPartials\Breadcrumbs.cshtml" />
     <Content Include="Views\MacroPartials\ContactFormMessages.cshtml" />
     <Content Include="Views\Partials\IndexTabsPartial.cshtml" />
     <Content Include="Views\Partials\ArticlesPartial.cshtml" />
+    <Content Include="Views\Partials\ProjectsPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -527,7 +543,6 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="Views\ContactFormSurface\" />
   </ItemGroup>
   <PropertyGroup>
