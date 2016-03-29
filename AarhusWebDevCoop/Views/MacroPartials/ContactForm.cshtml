@@ -1,43 +1,65 @@
 ﻿@model AarhusWebDevCoop.ViewModels.ContactForm
 
-@using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object {}, new { @class = "form-horizontal"}))
+@{
+    Layout = null;
+}
+
+@if (TempData["success"] == null)
 {
- if(TempData["Success"] == null) {
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 control-label" })
-        <div class="col-sm-6">
-            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name"})
-            @Html.ValidationMessageFor(m=> m.Name)
+    using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object { }, new { @class = "form-horizontal" }))
+    {
+        var reply = Request["reply"];
+        if (reply == null) {      
+            <div class="form-group text-center">
+                <div class="col-sm-12">
+                    <p>Post a new message</p>
+                </div>
+            </div>
+        } else {
+            <div class="alert alert-info" role="alert">
+                <strong>REPLY TO MESSAGE #@Request["reply"]</strong>
+                <a href="/contact-us/" class="btn btn-danger btn-xs pull-right">Cancel</a>
+            </div>
+        }
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, new { @class = "col-sm-3 control-label text-right" })
+            <div class="col-sm-9">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name" })
+                @Html.ValidationMessageFor(m => m.Name, null, new { @class = "label label-danger pull-right" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-sm-2 control-label" })
-        <div class="col-sm-6">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
-            @Html.ValidationMessageFor(m=> m.Email)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-sm-3 control-label text-right" })
+            <div class="col-sm-9">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
+                @Html.ValidationMessageFor(m => m.Email, null, new { @class = "label label-danger pull-right" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Subject, new { @class = "col-sm-2 control-label" })
-        <div class="col-sm-6">
-            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject" })
-            @Html.ValidationMessageFor(m=> m.Subject)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Subject, new { @class = "col-sm-3 control-label text-right" })
+            <div class="col-sm-9">
+                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", placeholder = "Subject" })
+                @Html.ValidationMessageFor(m => m.Subject, null, new { @class = "label label-danger pull-right" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Message, new { @class = "col-sm-2 control-label" })
-        <div class="col-sm-6">
-            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder ="Your message" })
-            @Html.ValidationMessageFor(m=> m.Message)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Message, new { @class = "col-sm-3 control-label text-right" })
+            <div class="col-sm-9">
+                @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Your message" })
+                @Html.ValidationMessageFor(m => m.Message, null, new { @class = "label label-danger pull-right" })
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-6">
-            <button id="contact-submit" type="submit" class="btn btn-primary input-medium pullleft">Send</button>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9 text-center">
+                <button id="contact-submit" type="submit" class="btn btn-primary input-medium pullleft">Send</button>
+            </div>
         </div>
-    </div>
+    }
 }
-else{
-<p>Thank you for contacting us. We'll be in touch soon</p>
-}
+else
+{
+    <p>Thank you for contacting us. We’ll be in touch soon!</p>
+    <form action="/contact-us/?guest=" method="post">
+        <button class="btn btn-primary" type="submit">SEND ANOTHER MESSAGE</button>
+    </form>
 }

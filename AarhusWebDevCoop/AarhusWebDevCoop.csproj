@@ -482,10 +482,15 @@
     <Content Include="Views\forbiddenAccess.cshtml" />
     <Content Include="Views\forbiddenAccess.cshtml" />
 
+
     <Content Include="Views\MacroPartials\Active Members.cshtml" />
     <Content Include="Views\MacroPartials\Prospect Members.cshtml" />
     <Content Include="Views\MacroPartials\Register.cshtml" />
     <Content Include="Views\MacroPartials\Breadcrumbs.cshtml" />
+
+    <Content Include="Views\MacroPartials\Breadcrumbs.cshtml" />
+    <Content Include="Views\MacroPartials\ContactFormMessages.cshtml" />
+
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

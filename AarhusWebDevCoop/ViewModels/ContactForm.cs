@@ -8,13 +8,13 @@ namespace AarhusWebDevCoop.ViewModels
         public string Name { get; set; }
 
         [Required]
-        [EmailAddress(ErrorMessage ="This is not a valid email adress")]
+        [EmailAddress(ErrorMessage ="This is not a valid email address")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Please specify a Subject")]
+        [Required(ErrorMessage = "Please specify a subject")]
         public string Subject { get; set; }
 
-        [Required(ErrorMessage = "DOn't just send me empty messages")]
+        [Required(ErrorMessage = "Don't just send me empty")]
         public string Message { get; set; }
     }
 }
