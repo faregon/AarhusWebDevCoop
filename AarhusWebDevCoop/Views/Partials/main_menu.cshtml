@@ -61,29 +61,55 @@
 							<ul class="dropdown-menu">
                                 @if (page.Name == "Our Projects") {
                                     <li class="dropdown-header">COMPLETED</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"11\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
+
+									foreach (var menuItem in page.Children.Where("UmbracoNavHide== false").Where("projectStatus.Contains(\"11\")")) {
+										
+										var isProtected = umbraco.library.IsProtected(menuItem.Id, menuItem.path);
+										var loginAccess = umbraco.library.IsProtected(menuItem.Id, menuItem.path) && umbraco.library.HasAccess(menuItem.Id, menuItem.path);
+										
+										if (!isProtected || loginAccess) { 
+											<li class="@(menuItem.IsAncestorOrSelf(CurrentPage) ? "active": null)">
+												<a href="@menuItem.Url">@menuItem.Name</a>
+											</li>
+										}
+									}
+
 									<li class="dropdown-header">UNDER DEVELOPMENT</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"10\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
+                                    foreach (var menuItem in page.Children.Where("UmbracoNavHide== false").Where("projectStatus.Contains(\"10\")")) {
+										
+										var isProtected = umbraco.library.IsProtected(menuItem.Id, menuItem.path);
+										var loginAccess = umbraco.library.IsProtected(menuItem.Id, menuItem.path) && umbraco.library.HasAccess(menuItem.Id, menuItem.path);
+										
+										if (!isProtected || loginAccess) { 
+											<li class="@(menuItem.IsAncestorOrSelf(CurrentPage) ? "active": null)">
+												<a href="@menuItem.Url">@menuItem.Name</a>
+											</li>
+										}
+									}
 									<li class="dropdown-header">INITIATED</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"9\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
-									<li class="dropdown-header">IDEA</li>
-                                    foreach (var subPage in page.Children.Where("Visible").Where("projectStatus.Contains(\"8\")"))
-                                    {
-                                        var subCurrent = CurrentPage.Id == subPage.Id ? "active" : null;
-                                        <li class="@subCurrent"><a href="@subPage.Url">@subPage.Name</a></li>
-                                    }
+                                    foreach (var menuItem in page.Children.Where("UmbracoNavHide== false").Where("projectStatus.Contains(\"9\")")) {
+										
+										var isProtected = umbraco.library.IsProtected(menuItem.Id, menuItem.path);
+										var loginAccess = umbraco.library.IsProtected(menuItem.Id, menuItem.path) && umbraco.library.HasAccess(menuItem.Id, menuItem.path);
+										
+										if (!isProtected || loginAccess) { 
+											<li class="@(menuItem.IsAncestorOrSelf(CurrentPage) ? "active": null)">
+												<a href="@menuItem.Url">@menuItem.Name</a>
+											</li>
+										}
+									}
+									<li class="dropdown-header">IdEA</li>
+                                    foreach (var menuItem in page.Children.Where("UmbracoNavHide== false").Where("projectStatus.Contains(\"8\")")) {
+										
+										var isProtected = umbraco.library.IsProtected(menuItem.Id, menuItem.path);
+										var loginAccess = umbraco.library.IsProtected(menuItem.Id, menuItem.path) && umbraco.library.HasAccess(menuItem.Id, menuItem.path);
+										
+										if (!isProtected || loginAccess) { 
+											<li class="@(menuItem.IsAncestorOrSelf(CurrentPage) ? "active": null)">
+												<a href="@menuItem.Url">@menuItem.Name</a>
+											</li>
+										}
+									}
                                 } else {
 								    foreach (var subPage in page.Children.Where("Visible"))
 								    {
@@ -101,5 +127,5 @@
 				}
 			</ul>
 		</div>
-    </div><!-- /.container-fluid -->
+    </div><!-- /.container-fluId -->
 </nav>

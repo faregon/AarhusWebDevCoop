@@ -2,5 +2,16 @@
 @{
 	Layout = "master.cshtml";
 }
-@Umbraco.Field("projectsTitle")
-@Umbraco.Field("projectsBodyText")
+
+<div class="jumbotron">
+	<div class="container">
+		<div class="page-header">
+			<h1>@Umbraco.Field("projectsTitle")<small> &nbsp;</small></h1>
+		</div>
+		<p>@Umbraco.Field("projectsBodyText")</p>
+		<p><a class="btn btn-primary btn-lg" href="/our-projects/scandinavian/" role="button">Check our first completed project</a></p>
+	</div>
+</div>
+			
+
+

@@ -1,0 +1,42 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+
+@{
+    var contact = CurrentPage.Children.Where("NodeTypeAlias == \"List View - contactPage\"");
+	var messages = Umbraco.TypedContent(1114).Children();
+}
+
+
+<table class="table">
+    <thead>
+        <th>#</th>
+        <th>MESSAGE</th>
+        <th>SUBJECT</th>
+        <th>FROM</th>
+    </thead>
+    <tbody>
+        @foreach (var item in contact) {
+            var itemIndex = Convert.ToInt32(contact.IndexOf(item)+1);
+            var itemReply = Convert.ToInt32(Request["reply"]);
+
+            if (itemIndex == itemReply) {
+                <tr class="alert alert-info">
+                    <td>@(itemIndex)</td>
+                    <td>@item.message</td>
+                    <td>@item.subject</td>
+                    <td>@item.messageName</td>
+                </tr>
+            } else {
+                <tr>
+                    <td>@(itemIndex)</td>
+                    <td>@item.message <form action="/contact-us/?reply=@itemIndex&commentId=@item.Id" method="post"><button class="btn btn-primary btn-xs" type="submit">reply</button></form></td>
+                    <td>@item.subject</td>
+                    <td>@item.messageName</td>
+                </tr>
+            }
+        }
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>

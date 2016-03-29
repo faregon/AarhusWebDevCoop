@@ -23,7 +23,7 @@
 						<th>Writer</th>
 						<th>Title</th>
 						<th>Content</th>
-						<th>Create Date</th>
+						<th>Date</th>
                     </thead>
                     <tbody>
                         @foreach (var article in items.Skip((page - 1) * pageSize).Take(pageSize))
@@ -47,23 +47,23 @@
                             <ul class="pagination pagination-lg">
                                 @{
                                     if (page == 1) {
-                                        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                        <li class="disabled"><a href="#articles" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
                                     }
                                     else if (page > 1)
                                     {
-                                        <li><a href="?page=@(page-1)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                        <li><a href="?page=@(page-1)#articles" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
                                     }
                                     for (int p = 1; p < totalPages + 1; p++)
                                     {
                                         var active = (p == page) ? "active" : null;
-                                        <li class="@active"><a href="?page=@p">@p<span class="sr-only">(current)</span></a></li>
+                                        <li class="@active"><a href="?page=@p#articles">@p<span class="sr-only">(current)</span></a></li>
                                     }
                                     if (page == totalPages) {
-                                        <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                        <li class="disabled"><a href="#articles" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                                     }
                                     else if (page < totalPages)
                                     {
-                                        <li><a href="?page=@(page+1)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                        <li><a href="?page=@(page+1)#articles" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                                     }
                                 }
                             </ul>

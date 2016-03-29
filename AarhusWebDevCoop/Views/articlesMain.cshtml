@@ -3,8 +3,15 @@
 	Layout = "master.cshtml";
 }
 
-@Umbraco.Field("articleTitle")
-	
-@Umbraco.Field("articleBodyText")
-	
+<div class="jumbotron">
+	<div class="container">
+		<div class="page-header">
+			<h1>@Umbraco.Field("articleTitle")<small> &nbsp;</small></h1>
+		</div>
+		<p>@Umbraco.Field("articleBodyText")</p>
+		<p><a class="btn btn-primary btn-lg" href="#articles" role="button">Check the Articles</a></p>
+	</div>
+</div>
+
+<span id="articles">&nbsp;</span>
 @Html.Partial("ArticlesPartial")

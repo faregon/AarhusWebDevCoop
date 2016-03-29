@@ -1,8 +1,22 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = "master.cshtml";
+    Layout = "master.cshtml";
 }
-<h2> @CurrentPage.Name </h2>
-	<div>
-	@Html.Action("Index", "ContactFormSurface")
-	</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <!-- @Umbraco.RenderMacro("ContactFormMessages") -->
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    @Umbraco.Field("pageName")
+                </div>
+            </div>
+            <div class="panel-body">
+                @Html.Action("Index", "ContactFormSurface")
+            </div>
+        </div>
+    </div>
+</div>
